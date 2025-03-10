@@ -1,0 +1,108 @@
+format = """
+[](color_accent)\
+$os\
+$username\
+[](bg:color_black fg:color_accent)\
+$directory\
+[](fg:color_black bg:color_accent)\
+$git_branch\
+$git_status\
+[](fg:color_accent bg:color_black)\
+$c\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+$scala\
+$python\
+[](fg:color_black bg:color_accent)\
+$time\
+[ ](fg:color_accent)\
+"""
+
+palette = 'custom_purple'
+
+[palettes.custom_blue]
+color_accent = '#2471a3'
+color_black = '#000000'
+color_white = '#ffffff'
+
+[palettes.custom_purple]
+color_accent = '#8032ed'
+color_black = '#000000'
+color_white = '#ffffff'
+
+[username]
+show_always = true
+style_user = "bg:color_accent fg:color_white"
+style_root = "bg:#B4BEFE"
+format = '[$user ]($style)'
+disabled = false
+
+[os]
+style = "bg:color_accent fg:color_white"
+disabled = false # Disabled by default
+
+[os.symbols]
+Arch = "󰣇 "
+Ubuntu = " "
+Debian = " "
+Windows = " "
+
+[directory]
+style = "bg:color_black fg:color_accent"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:color_accent fg:color_white"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:color_accent fg:color_white"
+format = '[$all_status$ahead_behind ]($style)'
+
+[java]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:color_black fg:color_accent"
+format = '[[ $symbol( $version) ](fg:color_accent bg:color_black)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:color_accent fg:color_white"
+format = '[ $time ]($style)'
