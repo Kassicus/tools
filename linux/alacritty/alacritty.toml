@@ -1,0 +1,13 @@
+
+[font]
+normal = { family = "Terminess Nerd Font", style = "Regular"}
+
+[window]
+dimensions = { columns = 110, lines = 40 }
+#decorations = "None"
+opacity = 0.95
+
+[general]
+import = [
+"~/.config/alacritty/catppuccin-mocha.toml"
+]
